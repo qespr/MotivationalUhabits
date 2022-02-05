@@ -20,5 +20,4 @@ node_modules
 *.sketch
 /design
 /releases
-/screenshots
 crowdin.yml
