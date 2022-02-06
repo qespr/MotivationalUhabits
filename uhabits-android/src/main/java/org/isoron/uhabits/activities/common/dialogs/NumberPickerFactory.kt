@@ -30,6 +30,7 @@ import android.view.WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.NumberPicker
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
@@ -40,6 +41,7 @@ import org.isoron.uhabits.utils.InterfaceUtils
 import java.text.DecimalFormatSymbols
 import javax.inject.Inject
 import kotlin.math.roundToLong
+import com.github.qespr.waifumotivation.GenericUtils
 
 class NumberPickerFactory
 @Inject constructor(
@@ -56,6 +58,9 @@ class NumberPickerFactory
     ): AlertDialog {
         val inflater = LayoutInflater.from(context)
         val view = inflater.inflate(R.layout.number_picker_dialog, null)
+
+        val waifuImage = view.findViewById<ImageView>(R.id.waifuImageView)
+        waifuImage.setImageDrawable(GenericUtils.loadWaifuDrawable(context))
 
         val picker = view.findViewById<NumberPicker>(R.id.picker)
         val picker2 = view.findViewById<NumberPicker>(R.id.picker2)

@@ -30,43 +30,44 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="5dp"
+        android:padding="0dp"
         android:baselineAligned="false">
 
-        <FrameLayout
-            style="@style/FormOuterBox"
-            android:layout_width="0dp"
-            android:layout_weight="1">
             <LinearLayout style="@style/DialogFormInnerBox">
-
-                <TextView
-                    style="@style/DialogFormLabel"
-                    android:text="@string/value" />
-
                 <LinearLayout
                     android:orientation="horizontal"
-                    android:gravity="center_horizontal"
+                    android:gravity="start"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/waifuImageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:gravity="start"
+                        android:adjustViewBounds="true"/>
+
                     <NumberPicker
                         android:id="@+id/picker"
                         android:layout_gravity="center"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content" />
 
                     <TextView
                         android:id="@+id/tvSeparator"
                         android:layout_gravity="center"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        />
+                        android:layout_height="wrap_content"/>
 
                     <NumberPicker
                         android:id="@+id/picker2"
                         android:layout_gravity="center"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        />
+                        android:layout_height="wrap_content" />
 
                     <TextView
                         android:id="@+id/tvUnit"
@@ -77,8 +78,6 @@
                 </LinearLayout>
 
             </LinearLayout>
-        </FrameLayout>
-
     </LinearLayout>
 
 

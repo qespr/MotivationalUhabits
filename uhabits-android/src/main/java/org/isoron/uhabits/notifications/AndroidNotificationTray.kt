@@ -33,6 +33,7 @@ import androidx.core.app.NotificationCompat.Action
 import androidx.core.app.NotificationCompat.Builder
 import androidx.core.app.NotificationCompat.WearableExtender
 import androidx.core.app.NotificationManagerCompat
+import com.github.qespr.waifumotivation.GenericUtils
 import org.isoron.uhabits.R
 import org.isoron.uhabits.core.AppScope
 import org.isoron.uhabits.core.models.Habit
@@ -134,6 +135,8 @@ class AndroidNotificationTray
             .setWhen(reminderTime)
             .setShowWhen(true)
             .setOngoing(preferences.shouldMakeNotificationsSticky())
+
+        GenericUtils.loadWaifuBitmap(context)?.let { builder.setLargeIcon(it) }
 
         if (habit.isNumerical) {
             wearableExtender.addAction(enterAction)
