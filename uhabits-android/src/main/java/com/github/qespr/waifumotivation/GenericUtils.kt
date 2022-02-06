@@ -25,6 +25,7 @@ object GenericUtils {
 
     const val WAIFU_FILENAME :String = "waifu.png"
 
+    //Functions to load bitmaps, taken directly from previous Motivational fork to save time
     fun loadWaifuBitmap(context: Context) : Bitmap? {
 
         val f = File(context.filesDir, WAIFU_FILENAME)
@@ -44,6 +45,7 @@ object GenericUtils {
         return null
     }
 
+    /**Lets user select image using filepicker or gallery*/
     fun startImageSelection(activity: Activity) {
 
         val getIntent = Intent(Intent.ACTION_GET_CONTENT)
@@ -57,6 +59,7 @@ object GenericUtils {
         startActivityForResult(activity, chooser, REQUEST_IMAGE, null)
     }
 
+    /**Makes local copy of selected image so his deletion won't break his motivation*/
     fun onImageSelect(activity :Activity, resultCode: Int, data: Intent?) {
 
         //From: http://burnignorance.com/android-apps-development/writing-bitmap-to-an-image-file-in-internal-storage/
@@ -84,6 +87,7 @@ object GenericUtils {
         }
     }
 
+    /**Delets internal copy of motivational image, original is untouched*/
     fun deleteMotivationImage(context :Context) {
         //Todo: Maybe we should ask for confirmation
         //Todo: Add the "waifu.png" filename to some constant
