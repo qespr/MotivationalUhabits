@@ -45,6 +45,8 @@ import org.isoron.uhabits.notifications.AndroidNotificationTray.Companion.create
 import org.isoron.uhabits.notifications.RingtoneManager
 import org.isoron.uhabits.widgets.WidgetUpdater
 import java.util.Calendar
+import com.github.qespr.waifumotivation.GenericUtils.RESULT_SELECT_WAIFU
+import com.github.qespr.waifumotivation.GenericUtils.RESULT_UNSELECT_WAIFU
 
 class SettingsFragment : PreferenceFragmentCompat(), OnSharedPreferenceChangeListener {
     private var sharedPrefs: SharedPreferences? = null
@@ -68,6 +70,8 @@ class SettingsFragment : PreferenceFragmentCompat(), OnSharedPreferenceChangeLis
             prefs = appContext.component.preferences
             widgetUpdater = appContext.component.widgetUpdater
         }
+        setResultOnPreferenceClick("pref_waifu_set", RESULT_SELECT_WAIFU)
+        setResultOnPreferenceClick("pref_waifu_unset", RESULT_UNSELECT_WAIFU)
         setResultOnPreferenceClick("importData", RESULT_IMPORT_DATA)
         setResultOnPreferenceClick("exportCSV", RESULT_EXPORT_CSV)
         setResultOnPreferenceClick("exportDB", RESULT_EXPORT_DB)

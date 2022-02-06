@@ -69,6 +69,10 @@ import org.isoron.uhabits.utils.showSendFileScreen
 import java.io.File
 import java.io.IOException
 import javax.inject.Inject
+import com.github.qespr.waifumotivation.GenericUtils
+import com.github.qespr.waifumotivation.GenericUtils.REQUEST_IMAGE
+import com.github.qespr.waifumotivation.GenericUtils.RESULT_SELECT_WAIFU
+import com.github.qespr.waifumotivation.GenericUtils.RESULT_UNSELECT_WAIFU
 
 const val RESULT_IMPORT_DATA = 101
 const val RESULT_EXPORT_CSV = 102
@@ -117,6 +121,7 @@ class ListHabitsScreen
         when (requestCode) {
             REQUEST_OPEN_DOCUMENT -> onOpenDocumentResult(resultCode, data)
             REQUEST_SETTINGS -> onSettingsResult(resultCode)
+            REQUEST_IMAGE -> GenericUtils.onImageSelect(activity, resultCode, data)
         }
     }
 
@@ -142,6 +147,8 @@ class ListHabitsScreen
             RESULT_EXPORT_DB -> onExportDB()
             RESULT_BUG_REPORT -> behavior.get().onSendBugReport()
             RESULT_REPAIR_DB -> behavior.get().onRepairDB()
+            RESULT_SELECT_WAIFU -> GenericUtils.startImageSelection(activity)
+            RESULT_UNSELECT_WAIFU -> GenericUtils.deleteMotivationImage(context)
         }
     }
 

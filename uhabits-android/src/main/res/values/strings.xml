@@ -228,6 +228,10 @@
     <string name="pref_skip_description">Toggle twice to add a skip instead of a checkmark. Skips keep your score unchanged and don\'t break your streak.</string>
     <string name="pref_unknown_title">Show question marks for missing data</string>
     <string name="pref_unknown_description">Differentiate days without data from actual lapses. To enter a lapse, toggle twice.</string>
+    <string name="pref_select_motivation_image_title">Select motivation image</string>
+    <string name="pref_select_motivation_image_decription">Select image to motivate you for task completition</string>
+    <string name="pref_unselect_motivation_image_title">Remove motivation image</string>
+    <string name="pref_unselect_motivation_image_description">In case you need to hide your powerlevel…</string>
     <string name="you_are_now_a_developer">You are now a developer</string>
     <string name="activity_not_found">No app was found to support this action</string>
     <string name="pref_midnight_delay_title">Extend day a few hours past midnight</string>

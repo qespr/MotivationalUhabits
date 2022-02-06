@@ -24,6 +24,18 @@
             android:key="interfaceCategory"
             android:title="@string/interface_preferences">
 
+        <Preference
+            android:key="pref_waifu_set"
+            android:summary="@string/pref_select_motivation_image_decription"
+            android:title="@string/pref_select_motivation_image_title"
+            app:iconSpaceReserved="false"/>
+
+        <Preference
+            android:key="pref_waifu_unset"
+            android:summary="@string/pref_unselect_motivation_image_description"
+            android:title="@string/pref_unselect_motivation_image_title"
+            app:iconSpaceReserved="false"/>
+
         <SwitchPreferenceCompat
                 android:defaultValue="false"
                 android:key="pref_short_toggle"
