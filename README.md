@@ -3,7 +3,7 @@
 
 Do you seek self improvement? Is it still hard to do your tasks even though you can keep exact track of them?
 
-Well, you're in luck! Introducing __Motivation Loop Habit Tracker__!
+Well, you're in luck! Introducing __Motivational Loop Habit Tracker__!
 
 Now every single time you'll get notification about some habit you need to complete, there will be image of your waifu to motivate
 you! Doesn't matter if you're weeb, ponyfag or anything else, now you can get reminded why are you doing it every time you do
@@ -17,10 +17,10 @@ Of course you can also use any other image you like (even 3DPD if that's what yo
 - (the same image) also in your number picker
 - Image can be removed at any time in settings (in case you need to hide your powerlevel temporarily)
 
-### Installation
+### Installation (!IMPORTANT!)
 
-!!Before installing this app either from source or from the releases page __MAKE SURE TO MAKE COMPLETE EXPORT OF YOUR DATA IN
-SETTINGS!__!! as your data will be gone forever otherwise!
+__!!__ Before installing this app either from source or from the releases page __MAKE SURE TO MAKE COMPLETE EXPORT OF YOUR DATA IN
+SETTINGS!!!__ as your data will be gone forever otherwise!
 
 As for the actual instalation instructions. You can use the released prebuilt package
 [here](https://github.com/qespr/MotivationalUhabits/releases/download/Motivational-v2.0.3/motivational-uhabits-android-debug.apk)
